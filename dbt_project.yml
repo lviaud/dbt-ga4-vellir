@@ -18,3 +18,10 @@ models:
     +materialized: view
     marts:
       +materialized: table
+
+vars:
+  ga4:
+    source_project: "ga4zodoganhou" # Project that contains raw GA4 data
+    property_ids: [313358243] # Array of properties to process
+    start_date: "20240122" # Earliest date to load
+    static_incremental_days: 3 # Number of days to scan and reprocess on each run
